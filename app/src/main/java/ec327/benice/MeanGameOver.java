@@ -29,8 +29,6 @@ public class MeanGameOver extends AppCompatActivity {
         txt_loser = (TextView)findViewById(R.id.txt_loser);
         btn_playagain = (Button) findViewById(R.id.btn_playagain);
 
-
-
         //set the everything to new font
         Typeface Bangersfont = Typeface.createFromAsset(getAssets(),"fonts/Bangers.ttf");
         txt_loser.setTypeface(Bangersfont);
