@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="ec327.benice.NiceGameOver"
+    android:background="@drawable/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="You&apos;re so Nice!"
+        android:id="@+id/txt_winner"
+        android:textSize="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#faf1a3"
+        android:layout_alignRight="@+id/img_win"
+        android:layout_alignEnd="@+id/img_win"
+        android:gravity="center" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:id="@+id/img_win"
+        android:src="@drawable/gameover_nice"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txt_winner"
+        android:layout_marginTop="-20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Play Again!"
+        android:id="@+id/btn_playagain"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:textSize="35dp"
+        android:textColor="#000000"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/img_win"
+        android:layout_alignEnd="@+id/img_win" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="(history 1)"
+        android:id="@+id/txt_history1"
+        android:textColor="#f7da62"
+        android:autoText="false"
+        android:gravity="center"
+        android:layout_below="@+id/txt_historytitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/txt_historytitle"
+        android:layout_alignEnd="@+id/txt_historytitle"
+        android:textSize="17dp"
+        android:maxLines="3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="(history 2)"
+        android:id="@+id/txt_history2"
+        android:gravity="center"
+        android:textColor="#f5e97a"
+        android:autoText="false"
+        android:layout_below="@+id/txt_history1"
+        android:layout_alignRight="@+id/txt_history1"
+        android:layout_alignEnd="@+id/txt_history1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="17dp"
+        android:maxLines="3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="(history 3)"
+        android:id="@+id/txt_history3"
+        android:gravity="center"
+        android:textColor="#f9f2ac"
+        android:autoText="false"
+        android:layout_below="@+id/txt_history2"
+        android:layout_alignRight="@+id/txt_history2"
+        android:layout_alignEnd="@+id/txt_history2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="17dp"
+        android:maxLines="3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="You Were Nice To..."
+        android:id="@+id/txt_historytitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/img_win"
+        android:layout_alignRight="@+id/img_win"
+        android:layout_alignEnd="@+id/img_win"
+        android:gravity="center"
+        android:textSize="28dp"
+        android:textColor="#faf1a3"
+        android:layout_marginTop="-12dp" />
+</RelativeLayout>
