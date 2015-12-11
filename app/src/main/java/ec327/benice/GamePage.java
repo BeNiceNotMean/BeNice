@@ -89,10 +89,6 @@ public class GamePage extends AppCompatActivity {
     private static ImageButton btnP3Nice;
     private static ImageButton btnP3Mean;
     private static TextSwitcher txtswitchP3;
-    //*******TextView Widgets, counters for each TextSwitcher********
-    //private static TextView txtview1;
-    //private static TextView txtview2;
-    //private static TextView txtview3;
 
     //Counter Widget
     private static ImageView counterpicture;
@@ -229,8 +225,7 @@ public class GamePage extends AppCompatActivity {
         p2_setFactory();
         p3_Click();
         p3_setFactory();
-        //Initialize the TextViews connected to each TextSwitcher: MUST GO AFTER px_setFactory() functions!!
-        //txtview1 = (TextView) txtswitchP1.getChildAt(contacts_Index);
+
     }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
