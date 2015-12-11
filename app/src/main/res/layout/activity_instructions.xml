@@ -11,19 +11,130 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/lblInstructions"
-        android:id="@+id/textView2"
+        android:text="INSTRUCTIONS"
+        android:id="@+id/txt_instructions"
         android:layout_alignParentTop="true"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textSize="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="BeNice is an app made to let users easily spread friendly feelings and good vibes through fun gameplay."
+        android:id="@+id/intro1"
+        android:layout_below="@+id/txt_instructions"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="13dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Using Twilio&apos;s text messaging API, BeNice sends messages of your choice to a randomly selected group of your phone’s contacts. "
+        android:id="@+id/intro2"
+        android:textSize="13dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_below="@+id/intro1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Goal: send 3 &quot;Compliments&quot; to 3 people (BeNice thrice!) before rejecting 3 (BeMean three times).  To start a new round, press the START button!"
+        android:id="@+id/intro3"
+        android:gravity="center"
+        android:textSize="13dp"
+        android:textColor="#000000"
+        android:layout_below="@+id/intro2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="On the game page, a yellow Compliment appears right away.  You can use the PREVIOUS and NEXT button to choose another message as many as times as you want.  The message list is limited to 15 per session, and is refreshed to a new list every new round."
+        android:id="@+id/compliment"
+        android:textSize="13dp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_below="@+id/intro3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="You will also see 3 contacts randomly chosen for this round. To send the message selected to a contact, press the SEND! smiley and a notification will pop up.  Congratulations, have gained a BeNice point!  "
+        android:id="@+id/contact"
+        android:textSize="13dp"
+        android:textColor="#ffcf41"
+        android:gravity="center"
+        android:layout_below="@+id/compliment"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Try to win by sending 3 messages to 3 contacts before the BeMean counter fills up to 3!"
+        android:id="@+id/gooooooaaaaaallll"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HAVE FUN!"
+        android:id="@+id/txt_havefun"
+        android:textSize="35dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:text="@string/lblInstructionsText1"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="To choose another contact than one pre loaded, press the NEXT! smiley.  This counts as a BeMean point. The counter at the bottom will show how many BeMean points you have."
+        android:id="@+id/textView"
+        android:textColor="#e32e2e"
+        android:textSize="13dp"
+        android:gravity="center"
+        android:layout_below="@+id/contact"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp" />
+
 </RelativeLayout>
 
 

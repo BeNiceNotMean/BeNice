@@ -345,7 +345,6 @@ public class GamePage extends AppCompatActivity {
                 //layout parameters. centers vertically and horizontally. and give parameters to TextView
                 FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.CENTER);
                 p1.setLayoutParams(params);
-                //compliment.setGravity(Gravity.CENTER);         //UNNEEDED?
 
                 p1.setEllipsize(TextUtils.TruncateAt.END);      //ellipses
                 p1.setMaxLines(2);
@@ -436,7 +435,6 @@ public class GamePage extends AppCompatActivity {
                 //layout parameters. centers vertically and horizontally. and give parameters to TextView
                 FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.CENTER);
                 p2.setLayoutParams(params);
-                //compliment.setGravity(Gravity.CENTER);         //UNNEEDED?
 
                 p2.setEllipsize(TextUtils.TruncateAt.END);      //ellipses
                 p2.setMaxLines(2);
@@ -528,7 +526,6 @@ public class GamePage extends AppCompatActivity {
                 //layout parameters. centers vertically and horizontally. and give parameters to TextView
                 FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.CENTER);
                 p3.setLayoutParams(params);
-                //compliment.setGravity(Gravity.CENTER);         //UNNEEDED?
 
                 p3.setEllipsize(TextUtils.TruncateAt.END);      //ellipses
                 p3.setMaxLines(2);
@@ -640,6 +637,7 @@ public class GamePage extends AppCompatActivity {
 
     }
 
+
     /////////////////////////////
     //END COMPLIMENT METHODS////
     /////////////////////////////
@@ -690,6 +688,11 @@ public class GamePage extends AppCompatActivity {
             //Log.d("HELPO", "The cursor section does not work");
         }
         return contacts_all;
+    }
+
+    //disable back button
+    @Override
+    public void onBackPressed() {
     }
 
 }   //end class
