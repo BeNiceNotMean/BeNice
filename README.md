@@ -5,7 +5,7 @@ BeNice is an app designed to create an exponential growth of good feelings throu
 1. Download the latest release -- current version benice.v1.0.1
 1. Do not worry about setting up your own server. Code included in the server-resources directory is for reference. Calls will be made to the BeNice Heroku server in version  <= 1.0.1
 1. We are using a minimum Android SDK version 8 however the target version is 23. For optimal use we recommend running on SDK version 23
-1. The app is dependent on a few libraries. Verify that the android-twilio SDK is included in the /libs folder as well as the native libraries in app/src/blah. 
+1. The app is dependent on a few libraries. Verify that the android-twilio SDK is included in the app/libs folder as well as the native libraries in app/src/main/jniLibs. 
 1. Building the app just requires the user to run the app in Android Studio
 
 ##Updating to include SMS functionality- *Bleeding Edge Version*
