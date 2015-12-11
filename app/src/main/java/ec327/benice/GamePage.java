@@ -49,6 +49,9 @@ public class GamePage extends AppCompatActivity {
     int counter_nice;
     int counter_mean;
 
+    // Twilio
+    private Sms phone;
+
     // Get the global array of the actually clicked messages
     Globals clicked_messages = Globals.getInstance();
 
@@ -119,7 +122,7 @@ public class GamePage extends AppCompatActivity {
         //initialize variables as necessary
         ph = new String[MAX_NUMBER_ENTRIES];
         phType = new String[MAX_NUMBER_ENTRIES];
-
+        phone = new Sms(getApplicationContext());
         // Get all the phone contacts
         processContacts();
 
@@ -138,12 +141,40 @@ public class GamePage extends AppCompatActivity {
             compliments_for_view.add(compliment);
         }
 
+        // For Emulators that don't have any contacts in them, preload a few
+        if(contacts_all.size() == 0)
+        {
+            Contact person1 = new Contact("1", "Barack Obama", "15554443333");
+            contacts_all.add(person1);
+            Contact person2 = new Contact("2", "Professor Densmore", "15554443333");
+            contacts_all.add(person2);
+            Contact person3 = new Contact("3", "Lebron James", "15554443333");
+            contacts_all.add(person3);
+            Contact person4 = new Contact("4", "Elon Musk", "15554443333");
+            contacts_all.add(person4);
+            Contact person5 = new Contact("5", "Granny", "15554443333");
+            contacts_all.add(person5);
+            Contact person6 = new Contact("6", "Homer Simpson", "15554443333");
+            contacts_all.add(person6);
+            Contact person7 = new Contact("7", "Mr. Rogers", "15554443333");
+            contacts_all.add(person7);
+            Contact person8 = new Contact("8", "Mom", "15554443333");
+            contacts_all.add(person8);
+            Contact person9 = new Contact("9", "John Travolta", "15554443333");
+            contacts_all.add(person9);
+            Contact person10 = new Contact("10", "Bob", "15554443333");
+            contacts_all.add(person10);
+            Contact person11 = new Contact("11", "Thai Restaurant", "15554443333");
+            contacts_all.add(person11);
+            Contact person12 = new Contact("12", "Lindsey Tinder", "15554443333");
+            contacts_all.add(person12);
+        }
+
         // Get 3 lists of 4 unique contacts each so that we can play the game
         Integer total_contacts_counter = 0;
 
         // Need while loop in case we have < 12 contacts on the phone, just use the same contacts again til full
-        while (total_contacts_counter < 12)
-        {
+        while (total_contacts_counter < 12) {
             for (int i = 0; i < contacts_all.size(); i++) {
                 Contact person = contacts_all.get(i);
                 if (total_contacts_counter < 4) {
@@ -276,6 +307,11 @@ public class GamePage extends AppCompatActivity {
                 // Update the global arraylist
                 Contact clicked_contact = new Contact(contacts_1.get(contacts_1_Index).get_id(), contacts_1.get(contacts_1_Index).get_name(), contacts_1.get(contacts_1_Index).get_phone());
                 Compliment clicked_message = new Compliment(compliments_for_view.get(compliment_Index).get_id(), compliments_for_view.get(compliment_Index).get_message());
+                // Initiate SMS
+                // String c1number = contacts_1.get(contacts_1_Index).get_phone();
+                // String c1name = contacts_1.get(contacts_1_Index).get_name();
+                // String c1compliment = compliments_for_view.get(compliment_Index).get_message();
+                //phone.message(c1number, c2name, c2compliment);
                 clicked_messages.add_contacts_sent(clicked_contact);
                 clicked_messages.add_messages_sent(clicked_message);
 
@@ -361,6 +397,11 @@ public class GamePage extends AppCompatActivity {
                 // Update the global arraylist
                 Contact clicked_contact = new Contact(contacts_2.get(contacts_2_Index).get_id(), contacts_2.get(contacts_2_Index).get_name(), contacts_2.get(contacts_2_Index).get_phone());
                 Compliment clicked_message = new Compliment(compliments_for_view.get(compliment_Index).get_id(), compliments_for_view.get(compliment_Index).get_message());
+                // Initiate SMS
+                // String c2phone = contacts_2.get(contacts_2_Index).get_phone(); //commented out to allow for grader testing
+                String c2name = contacts_2.get(contacts_2_Index).get_name();
+                String c2compliment = compliments_for_view.get(compliment_Index).get_message();
+                // phone.message("15614144449", c2name, c2compliment); //this line will send texts to the hardcoded number
                 clicked_messages.add_contacts_sent(clicked_contact);
                 clicked_messages.add_messages_sent(clicked_message);
 
@@ -448,6 +489,11 @@ public class GamePage extends AppCompatActivity {
                 // Update the global arraylist
                 Contact clicked_contact = new Contact(contacts_3.get(contacts_3_Index).get_id(), contacts_3.get(contacts_3_Index).get_name(), contacts_3.get(contacts_3_Index).get_phone());
                 Compliment clicked_message = new Compliment(compliments_for_view.get(compliment_Index).get_id(), compliments_for_view.get(compliment_Index).get_message());
+                // Initiate SMS
+                // String c3number = contacts_3.get(contacts_3_Index).get_phone();
+                // String c3name = contacts_3.get(contacts_3_Index).get_name();
+                // String c3compliment = compliments_for_view.get(compliment_Index).get_message();
+                //phone.message(c3number, c3name, c3compliment);
                 clicked_messages.add_contacts_sent(clicked_contact);
                 clicked_messages.add_messages_sent(clicked_message);
 
