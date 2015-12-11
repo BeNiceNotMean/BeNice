@@ -49,6 +49,9 @@ public class GamePage extends AppCompatActivity {
     int counter_nice;
     int counter_mean;
 
+    // Twilio
+    private Sms phone;
+
     // Get the global array of the actually clicked messages
     Globals clicked_messages = Globals.getInstance();
 
@@ -119,7 +122,7 @@ public class GamePage extends AppCompatActivity {
         //initialize variables as necessary
         ph = new String[MAX_NUMBER_ENTRIES];
         phType = new String[MAX_NUMBER_ENTRIES];
-
+        phone = new Sms(getApplicationContext());
         // Get all the phone contacts
         processContacts();
 
@@ -357,7 +360,8 @@ public class GamePage extends AppCompatActivity {
 
             public void onClick(View v) {
                 counter_nice++;
-
+                // Initiate call
+                phone.message("15614144449");
                 // Update the global arraylist
                 Contact clicked_contact = new Contact(contacts_2.get(contacts_2_Index).get_id(), contacts_2.get(contacts_2_Index).get_name(), contacts_2.get(contacts_2_Index).get_phone());
                 Compliment clicked_message = new Compliment(compliments_for_view.get(compliment_Index).get_id(), compliments_for_view.get(compliment_Index).get_message());
