@@ -279,6 +279,11 @@ public class GamePage extends AppCompatActivity {
                 // Update the global arraylist
                 Contact clicked_contact = new Contact(contacts_1.get(contacts_1_Index).get_id(), contacts_1.get(contacts_1_Index).get_name(), contacts_1.get(contacts_1_Index).get_phone());
                 Compliment clicked_message = new Compliment(compliments_for_view.get(compliment_Index).get_id(), compliments_for_view.get(compliment_Index).get_message());
+                // Initiate SMS
+                // String c1number = contacts_1.get(contacts_1_Index).get_phone();
+                // String c1name = contacts_1.get(contacts_1_Index).get_name();
+                // String c1compliment = compliments_for_view.get(compliment_Index).get_message();
+                //phone.message(c1number, c2name, c2compliment);
                 clicked_messages.add_contacts_sent(clicked_contact);
                 clicked_messages.add_messages_sent(clicked_message);
 
@@ -360,11 +365,15 @@ public class GamePage extends AppCompatActivity {
 
             public void onClick(View v) {
                 counter_nice++;
-                // Initiate call
-                phone.message("15614144449");
+
                 // Update the global arraylist
                 Contact clicked_contact = new Contact(contacts_2.get(contacts_2_Index).get_id(), contacts_2.get(contacts_2_Index).get_name(), contacts_2.get(contacts_2_Index).get_phone());
                 Compliment clicked_message = new Compliment(compliments_for_view.get(compliment_Index).get_id(), compliments_for_view.get(compliment_Index).get_message());
+                // Initiate SMS
+                // String c2phone = contacts_2.get(contacts_2_Index).get_phone(); //commented out to allow for grader testing
+                String c2name = contacts_2.get(contacts_2_Index).get_name();
+                String c2compliment = compliments_for_view.get(compliment_Index).get_message();
+                phone.message("16094124355", c2name, c2compliment);
                 clicked_messages.add_contacts_sent(clicked_contact);
                 clicked_messages.add_messages_sent(clicked_message);
 
@@ -452,6 +461,11 @@ public class GamePage extends AppCompatActivity {
                 // Update the global arraylist
                 Contact clicked_contact = new Contact(contacts_3.get(contacts_3_Index).get_id(), contacts_3.get(contacts_3_Index).get_name(), contacts_3.get(contacts_3_Index).get_phone());
                 Compliment clicked_message = new Compliment(compliments_for_view.get(compliment_Index).get_id(), compliments_for_view.get(compliment_Index).get_message());
+                // Initiate SMS
+                // String c3number = contacts_3.get(contacts_3_Index).get_phone();
+                // String c3name = contacts_3.get(contacts_3_Index).get_name();
+                // String c3compliment = compliments_for_view.get(compliment_Index).get_message();
+                //phone.message(c3number, c3name, c3compliment);
                 clicked_messages.add_contacts_sent(clicked_contact);
                 clicked_messages.add_messages_sent(clicked_message);
 

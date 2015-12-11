@@ -74,12 +74,13 @@ public class Sms implements Twilio.InitListener
             device.release();
     }
 
-    public void message(String phoneNumber) {
+    public void message(String phoneNumber, String name, String message) {
         try {
+            String body_value = "Hey " + name + "! " + message;
             Map<String, String> parameters = new HashMap<String, String>();
             parameters.put("To", phoneNumber);
             parameters.put("From", "16179350385"); //my Twilio number
-            parameters.put("Body", "Hey Jenny! Good luck on the bar exam!");
+            parameters.put("Body", body_value);
             if (device != null)
                 connection = device.connect(parameters, null /* ConnectionListener */);
             if (connection == null)
