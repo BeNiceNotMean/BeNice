@@ -401,7 +401,7 @@ public class GamePage extends AppCompatActivity {
                 // String c2phone = contacts_2.get(contacts_2_Index).get_phone(); //commented out to allow for grader testing
                 String c2name = contacts_2.get(contacts_2_Index).get_name();
                 String c2compliment = compliments_for_view.get(compliment_Index).get_message();
-                // phone.message("16094124355", c2name, c2compliment); //this line will send texts to the hardcoded number
+                // phone.message("15614144449", c2name, c2compliment); //this line will send texts to the hardcoded number
                 clicked_messages.add_contacts_sent(clicked_contact);
                 clicked_messages.add_messages_sent(clicked_message);
 
