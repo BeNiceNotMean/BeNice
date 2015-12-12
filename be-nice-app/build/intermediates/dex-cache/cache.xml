@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/DorRubin/AndroidStudioProjects/BeNice/app/libs/twilioclient-android.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="eeabbaca75dd704e5d638148a269cd0079943920">
+        <dex dex="/Users/DorRubin/AndroidStudioProjects/BeNice/app/build/intermediates/pre-dexed/debug/twilioclient-android-2a0ac2cef359de7b5591da07f62eca666736f0dd.jar" />
+    </item>
+
+</items>
